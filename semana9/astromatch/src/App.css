@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+body {
+  margin: 0;
+  background-color: #D0D0D0;
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rem;
+  justify-content: space-between;
+  width: 400px;
+  height: 36rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #0000000F;
+  /* position: fixed;
+   right: 35%; */
+}
+
+.Linha{
+border-bottom: 1px solid lightgray;
+
+padding: 0 10px;
+	flex-shrink: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+button{
+  margin-left: 72rem;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

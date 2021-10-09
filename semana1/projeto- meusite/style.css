@@ -1,0 +1,159 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(16, 15, 15);
+    color: white;
+
+}
+
+
+
+
+.menu {
+    display: flex;
+
+}
+
+
+
+.menu li {
+    list-style: none;
+    margin-left: 20px;
+
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px;
+
+}
+
+
+
+
+.section {
+
+    background-image: url(imgs/img1.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 50em;
+    color: white;
+    padding: 10em;
+
+}
+
+.section h1 {
+
+    line-height: 1em;
+    font-size: 4em;
+    text-decoration: underline overline white;
+
+}
+
+.section p {
+    font-size: 1.5em;
+}
+
+.foto {
+
+    width: 13em;
+    height: 13em;
+    border-radius: 6em;
+
+}
+
+.section2 {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 50em;
+    padding: 4em;
+}
+
+.section2 h1 {
+    line-height: 1em;
+    font-size: 3em;
+}
+
+.section2 p {
+    line-height: 2em;
+    margin-top: 1.5em;
+}
+
+
+
+
+
+
+
+.midia1 {
+    width: 2em;
+    height: 2em;
+
+}
+
+.midia2 {
+
+    width: 2em;
+    height: 2em;
+}
+
+.midia3 {
+    width: 4em;
+    height: 2em;
+}
+
+
+
+
+
+
+
+.section3 {
+    background-color: rgb(5, 88, 243);
+    text-align: center;
+    height: 50em;
+    padding: 10em;
+}
+
+.section4 {
+    text-align: center;
+    height: 50em;
+}
+
+
+
+footer {
+
+    margin-top: 40em;
+    background-color: rgb(16, 15, 15);
+    padding: 10px;
+    color: white;
+}
+

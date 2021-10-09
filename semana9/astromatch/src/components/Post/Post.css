@@ -1,0 +1,29 @@
+.Texto{
+margin-top: 0.5rem;
+margin-left: 1rem;
+}
+
+
+
+.Foto {
+display: flex;
+  
+}
+
+img{
+  height: 22rem;
+  width: 23rem;
+  margin-left: 1rem;
+}
+
+
+.NameIdade {
+  display: flex;
+  color: rgb(126, 126, 252);
+}
+
+
+.Descricao {
+  display: flex;
+  margin-top: 1rem;
+}

@@ -1,0 +1,16 @@
+POST  http://localhost:3003/test 
+Content-Type: application/json
+
+{
+"'name": "Mateus",
+"age": 898
+}
+///
+
+PUT http://localhost:3003/edit/827634823774
+Content-Type: application/json
+
+{
+"'name": "Mateus",
+"age": 898
+}

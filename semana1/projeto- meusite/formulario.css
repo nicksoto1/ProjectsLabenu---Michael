@@ -1,0 +1,77 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+   padding: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(16, 15, 15);
+    color: white;
+}
+
+
+
+
+.menu {
+    display: flex;
+}
+
+
+
+.menu li {
+    list-style: none;
+    margin-left: 20px;
+
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px;
+}
+
+h1 {
+    margin: 50px 60px 10px 10px;
+    text-align: center;
+}
+
+form {
+    border-radius: 2px;
+    background-color: #34d847;
+    padding: 20px;
+    margin-top: 10em;
+    height: 36em;
+   
+}
+
+
+#name,#sobre,#mai,#msg{
+    margin-top: 1em;
+}
+
+
+
+footer {
+
+    margin-top: 40em;
+    background-color: rgb(16, 15, 15);
+    padding: 10px;
+    color: white;
+}

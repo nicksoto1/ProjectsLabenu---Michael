@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script defer src="index.js"></script>
+    <title>Despesas</title>
+</head>
+<body>
+
+    <!-- Primeira Seção -->
+    <div id='cadastro'>
+        <p>Cadastrar Despesa</p>
+        <input id="valorCadastro" type="number" placeholder="Valor da Despesa">  <!-- Input: valor da despesa -->    
+        <select id="tipoCadastro">  <!-- Select: selecione um tipo  -->      
+            <option value="" disabled selected>Selecione um tipo</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="utilidades">Utilidades</option>
+            <option value="viagem">Viagem</option>
+        </select>
+        <input id="descricaoCadastro" type="text" placeholder="Descrição">  <!-- Input: descrição da empresa -->  
+        <button onclick="adicionarDespesa()">Adicionar</button> <!-- Botão para adicionar os dados -->
+    </div>
+    <hr/>
+
+<!-- Segunda Seção -->
+    <div id="filtro">
+        <p>Filtrar Despesas</p>
+        <select id="tipoFiltro">  <!-- Select: selecione um tipo 2  -->    
+            <option value="" selected disabled>Selecione um tipo</option>
+            <option value="todos">Todos</option>
+            <option value="alimentação">Alimentação</option>
+            <option value="utilidades">Utilidades</option>
+            <option value="viagem">Viagem</option>
+        </select>
+        <input id="valorFiltroMin" type="number" placeholder="Valor mínimo">  <!-- Input: valor minimo -->  
+        <input id="valorFiltroMax" type="number" placeholder="Valor máximo">  <!-- Input: valor maximo -->  
+        <button onclick="filtrarDespesas()">Filtrar</button> <!-- Botão para filtrar -->
+        <button onclick="limparFiltros()">Limpar</button>   <!-- Botão para limpar -->
+    </div>
+    <hr/>
+
+    <div id="despesas"></div>
+    
+    <hr />
+
+    <div id="extrato"></div>
+
+</body>
+</html>

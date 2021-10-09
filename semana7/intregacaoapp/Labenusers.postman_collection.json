@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "f2fb0be6-ad18-4553-9844-ae8b512f81b1",
+		"name": "Labenusers",
+		"description": "## Descrição\n</br>Esta API serve para exemplificar um generanciamento de usuários.\n```\n\tFeito pela Labenu. Todos os direitos reservados\n```\n\n## Instruções gerais.\n\n**Autenticação**\n\nToda requisição deve ter uma identificação de quem está fazendo a requisição. Ela deve ser enviada por meio do header `Authorization`, da seguinte forma:\n\n`Authorization: \"nome-sobrenome-turma\"`\n\nPor exemplo, se meu nome é Bob Marley e eu sou da turma Newton, o header deve ser:\n\n`Authorization: \"bob-marley-newton\"`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users",
+						":id\n"
+					],
+					"variable": [
+						{
+							"key": "id\n",
+							"value": ""
+						}
+					]
+				},
+				"description": "### Descrição:\nEsta requisição serve para ver o `id` e o `name` de todos os usuários\n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n\n### Output:\n**Body**\nArray com usuarios com o seguinte formato:\n<br/> `id`: id de cada usuário\n<br/> `name`: nome de cada playlist\n\n```\n[\n    {\n        \"id\": \"string\",\n        \"name\": \"string\"\n    }\n]\n\n```\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "michael-soto-dumont"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"id": "860847d5-7895-4cb0-bc4f-9fd6289772d2",
+							"key": "id",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"description": "### Descrição:\nEsta requisição permite visualizar as informações de um usuário (`name` e `email`)\n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n\n**Path Param**\n<br/>`id`: id do usuário (obrigatório)\n\n### Output:\n**Body**\n<br/> `id`: id de cada música\n<br/> `name`: nome do usuário\n<br/> `email`: email do usuário\n```\n{\n    \"email\": \"string\",\n    \"name\": \"string\",\n    \"id\": \"string\"\n}\n```\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "searchUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/search?name=Stifler",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Stifler"
+						},
+						{
+							"key": "email",
+							"value": "marcos@gmail.com",
+							"disabled": true
+						}
+					]
+				},
+				"description": "### Descrição:\nEssa requisição parmite pesquisar por um aluno, usando o nome ou email exatos.\n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n**Query String**\n<br/> `name`: nome exato do usuário (opcional)\n<br/> Obs.: não importam se as letrar são maiusculas ou minusculas\n<br/> `email`: email exato do usuário (opcional)\n\n### Output:\n**Body**\nArray com usuarios com o seguinte formato:\n<br/> `id`: id de cada usuário\n<br/> `name`: nome de cada usuário\n```\n[\n    {\n        \"id\": \"string\",\n        \"name\": \"string\"\n    }\n]\n\n```\n\n\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Marcos\",\n\t\"email\": \"marcos@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users"
+					]
+				},
+				"description": "### Descrição:\nEssa requisição cria um novo usuário. \n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n**Body**\n<br/>`name`: nome do usuário (obrigatório)\n<br/>`email`: email do usuário (obrigatório)\n```\n{\n\t\"name\": \"string\",\n\t\"email\": \"string\"\n}\n```\n"
+			},
+			"response": []
+		},
+		{
+			"name": "editUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "michael-soto-dumont"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Stifler\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "d7488919-f493-432f-abab-3c5ae8b09741",
+							"type": "string"
+						}
+					]
+				},
+				"description": "### Descrição:\nEssa requisição edita um usuário existente.\n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n**Body**\n<br/>`name`: novo nome do usuário (opcional)\n<br/>`email`: novo email do usuário (opcional)\n```\n{\n\t\"name\": \"string\",\n\t\"email\": \"string\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labenusers",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "dca0ef44-f8ad-413c-9b51-ee429ee9258f",
+							"type": "string"
+						}
+					]
+				},
+				"description": "### Descrição:\nEsta requisição serve para deletar algum usuário.\n\n### Input:\n**Headers**\n<br/>`Authorization`: token de autenticação da API\n```\n\tAuthorization: \"nome-sobrenome-turma\"\n```\n\n**Path Param**\n<br/>`id`: id do usuário (obrigatório)"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

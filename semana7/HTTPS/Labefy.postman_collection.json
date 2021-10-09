@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "36401152-666f-4228-b8fd-38d43db55192",
+		"name": "Labefy",
+		"description": "Esta API gerencia playlists e músicas.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Esta requisição serve para ver o id e o name de todas as suas playlists."
+			},
+			"response": []
+		},
+		{
+			"name": "searchPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Essa requisição parmite pesquisar por uma playlist, usando o nome dela ou parte dele."
+			},
+			"response": []
+		},
+		{
+			"name": " getPlaylistTracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "a905863e-467d-4315-9a6e-c44836288504"
+						}
+					]
+				},
+				"description": "Esta requisição permite verificar quais músicas estão em uma determinada playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "createPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Esta requisição permite verificar quais músicas estão em uma determinada playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToPlaylist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "michael-soto-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"CASTLE OF GLASS\",\n\t\"artist\": \"Linkin Park\",\n\t\"url\": \"https://www.youtube.com/watch?v=ScNNfyq3d_w\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "d269da3b-36a8-4b04-90b1-79b563d31c56"
+						}
+					]
+				},
+				"description": "Essa requisição adiciona uma música a uma playlist existente"
+			},
+			"response": []
+		},
+		{
+			"name": "deletePlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Esta requisição permite verificar quais músicas estão em uma determinada playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "removeTrackFromPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Esta requisição permite verificar quais músicas estão em uma determinada playlist"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

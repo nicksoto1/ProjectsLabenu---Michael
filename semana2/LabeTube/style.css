@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+
+
+header {
+    background-color: rgb(248, 155, 41);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    height: 3em;
+  
+
+
+}
+
+header p {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+input {
+    margin-right: 5em;
+    height: 2em;
+    width: 10em;
+display: flex;
+
+}
+
+
+
+section {
+    height: 50em;
+}
+
+
+.secao p{
+    font-weight: bold;
+    position: relative;
+    top: 4em;
+    left: 5em;
+}
+
+
+
+.container {
+margin-left: 2em;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+
+    /* justify-items: center;
+    align-items: center; */
+
+    /* column-gap: 0em;  Espaço entre as imagens horizontal */
+     row-gap: 1em;   Espaço entre as imagens vertical
+   
+}
+
+
+
+
+.container img {
+
+    height: 200px;
+    width: 200px;
+
+    border: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.quadrado {
+
+    height: 17em;
+    width: 12.7em;
+    border: 1px solid green;
+   
+}
+
+.quadrado p{
+    display: flex ;
+     flex-direction: row;
+    margin-top: 2em;
+    margin-left: 0.5em;
+     align-items: center;
+     color: black;
+     
+}
+
+iframe {
+
+    margin: 5em 5em;
+    height: 25em;
+    width: 40em;
+}
+
+
+footer {
+
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0.3em;
+    height: 2em;
+    background-color: black;
+    color: white;
+}
+
+
+
+@media screen (min-device-width: 320px) and (max-device-width:480px){
+
+
+
+
+   
+    .container {
+       display: flex;
+       width: 20px;
+       height:10px;
+       flex-flow: column nowrap;
+        
+    }
+
+
+
+
+
+
+}
